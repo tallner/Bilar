@@ -10,6 +10,7 @@ public class Bilar {
     private String modell;
     private String color;
     private int year;
+    private boolean radioRunning;
    
 
 
