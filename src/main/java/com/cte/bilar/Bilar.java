@@ -10,7 +10,7 @@ public class Bilar {
     private String modell;
     private String color;
     private int year;
-    private boolean radioRunning;
+    private int nrWheels;
    
 
 
@@ -20,12 +20,13 @@ public class Bilar {
     }
 
 
-    public Bilar(String namn, String modell, String color, int year) {
+    public Bilar(String namn, String modell, String color, int year, int nrWheels) {
         
         this.namn = namn;
         this.modell = modell;
         this.color = color;
         this.year = year;
+        this.nrWheels = nrWheels;
       
     }
 
