@@ -3,13 +3,26 @@ package com.cte.bilar;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
 public class BilarController {
+    @CrossOrigin(value = "*")
+    @RequestMapping(value = "/health",method = RequestMethod.GET)
+    public ResponseEntity<?> health() throws Exception {
+        try {
+            return ResponseEntity.status(200).body("Ok");
+        } catch (Exception e) {
+            return (ResponseEntity<?>) ResponseEntity.internalServerError().body(e.getMessage());
+        }
+}
+
     @GetMapping(value = "/car")
     @CrossOrigin()
     public List<Bilar> getAll(){
