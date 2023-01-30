@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class BilarController {
-    @CrossOrigin(value = "*")
-    @RequestMapping(value = "/health",method = RequestMethod.GET)
+    @CrossOrigin()
+    @RequestMapping(value = "/",method = RequestMethod.GET)
     public ResponseEntity<?> health() throws Exception {
         try {
             return ResponseEntity.status(200).body("Ok");
