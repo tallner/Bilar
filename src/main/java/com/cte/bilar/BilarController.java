@@ -22,7 +22,7 @@ public class BilarController {
             return (ResponseEntity<?>) ResponseEntity.internalServerError().body(e.getMessage());
         }
 }
-
+/*
     @GetMapping(value = "/car")
     @CrossOrigin()
     public List<Bilar> getAll(){
@@ -34,5 +34,5 @@ public class BilarController {
         l.add(new Bilar("namn3", "modell3", "color3", 1998,8));
         return l;
     }
-
+*/
 }
